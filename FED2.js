@@ -11,7 +11,7 @@
 输出：[1, 2, 3]
 */
 function getUrlParam(sUrl, sKey) {
-  const paramsArray = sUrl.split('?')[1].split('#')[0].split('&');
+  const paramsArray = sUrl.split('?')[1]?.split('#')[0]?.split('&');
   const obj = {};
   paramsArray.forEach(item => {
     const [key, value] = item.split('=');
@@ -34,6 +34,23 @@ console.log(test());
 /* 
   node12低版本解析<?.>链选操作符有问题，建议不使用
 
+  ```js
+  const obj = {
+    foo: {
+      bar: {
+        baz: 42,
+        fun: ()=>{}
+      },
+    },
+  };
+
+  // 不使用?.
+  let baz = obj && obj.foo && obj.foo.bar && obj.foo.bar.baz;
+
+  // 使用?.
+  let baz = obj?.foo?.bar?.baz; // 结果：42
+  ```
+
   // 使用这则获取url参数
   function getQueryObject(url) {
   　url = url == null ? window.location.href : url;  
@@ -51,5 +68,29 @@ console.log(test());
   }
 
   String.prototype.replace()参考链接https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
+  # Array.prototype.slice()
+
+  ## 语法
+
+  ```
+  arr.slice([begin[, end]])
+  ```
+
+  slice() 方法返回一个新的额数组对象，这个对象是由 begin 和 end 决定的原数组的浅拷贝（包括begin，不包括end）。原始数组不会被改变
+
+  ## 类数组（Array-like）对象
+
+  slice 方法可以用来将一个类数组（Array-like）对象/几核转换成一个新数组。你只需将该方法绑定到这个对象上
+  ```
+    fuction list() {
+      return Array.prototype.slice.call(arguments); // [].slice.call(arguments)
+    }
+
+    var list1 = list(1, 2, 3) // [1, 2, 3]
+  ```
+
+
+  # void 0 === undefined
 
 */

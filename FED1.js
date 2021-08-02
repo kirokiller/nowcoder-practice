@@ -26,7 +26,7 @@ function add() {
 }
 
 function test() {
-  const result = bindThis(add, oTarget)(1, 2);
+  const result = bindThis(add, oTarget, 1, 2)(3, 4);
   console.log(result);
 }
 

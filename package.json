@@ -1,0 +1,22 @@
+{
+  "name": "nowcoder-practice",
+  "version": "1.0.0",
+  "description": "牛客网习题练习（前端篇）",
+  "main": "FED1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirokiller/nowcoder-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirokiller/nowcoder-practice/issues"
+  },
+  "homepage": "https://github.com/kirokiller/nowcoder-practice#readme",
+  "devDependencies": {
+    "jsdom": "^16.6.0"
+  }
+}
