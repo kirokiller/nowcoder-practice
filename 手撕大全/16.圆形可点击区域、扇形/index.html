@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .circle-click-area {
+      background: red;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    .sector {
+      width: 0;
+      height: 0;
+      border: 100px solid transparent;
+      border-radius: 50%;
+      border-bottom-color: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <div onclick="myclick()" class="circle-click-area">
+    点击
+  </div>
+
+<!-- 
+  方法2：<img>通过usemap映射到<map>的circle形<area>
+    <img src="images/lanlvseImg.png" usemap="#Map" />
+    <map name="Map" id="Map">
+      <area
+        shape="circle"
+        coords="100,100,50"
+        href="http://www.baidu.com"
+        rel="external nofollow"
+        target="_blank"
+      />
+    </map>
+ -->
+<!-- 
+  方法 3： JS 实现，获取鼠标点击位置坐标，判断其到圆点的距离是否不大于圆的半径，来判断点击位置是否在圆内。
+  document.onclick = function (e) {
+    var r = 50
+    var x1 = 100,
+      y1 = 100 // 圆心坐标
+    var x = e.clientX,
+      y = e.clientY
+    var distance = Math.abs(Math.sqrt(Math.pow(x - x1, 2) + Math.pow(y - y1, 2)))
+    if (distance < r) {
+      alert('OK')
+    }
+  }
+ -->
+  <div class="sector"></div>
+</body>
+
+<script>
+  function myclick(){
+    console.log('click');
+  }
+</script>
+</html>

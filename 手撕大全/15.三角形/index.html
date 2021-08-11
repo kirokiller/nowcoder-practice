@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .triangle {
+      width: 0;
+      height: 0;
+      border-width: 50px;
+      border-style: solid;
+      border-color: yellow green red blue;
+    }
+    .triangle1 {
+      width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-bottom: 50px solid red;
+    }
+    .triangle1-1 {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;
+    }
+
+    .triangle2 {
+      width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-left: 50px solid blue;
+    }
+    .triangle2-1 {
+      width: 0;
+      height: 0;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+      border-left: 100px solid blue;
+      
+    }
+
+    .triangle3 {
+      width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-top: 50px solid yellow;
+    }
+    .triangle4 {
+      width: 0;
+      height: 0;
+      border: 50px solid transparent;
+      border-right: 50px solid green;
+    }
+
+    .top-left {
+      width: 0;
+      height: 0;
+      border-top: 100px solid red;
+      border-right: 100px solid transparent;
+    }
+
+    .top-right {
+      width: 0;
+      height: 0;
+      border-top: 100px solid blue;
+      border-left: 100px solid transparent;
+    }
+
+    .bottom-right {
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid yellow;
+      border-left: 100px solid transparent;
+    }
+    .bottom-left {
+      width: 0;
+      height: 0;
+      border-bottom: 100px solid green;
+      border-right: 100px solid transparent;
+    }
+
+    .top-triangle{
+      width: 0;
+      height: 0;
+      border-bottom: 50px solid orange;
+      border-left: 50px solid transparent;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="triangle"></div>
+  <div class="triangle1"></div>
+  <div class="triangle1-1"></div>
+
+  <div class="triangle2"></div>
+  <div class="triangle2-1"></div>
+
+  <div class="triangle3"></div>
+  <div class="triangle3-1"></div>
+
+  <div class="triangle4"></div>
+  <div class="triangle4-1"></div>
+
+
+  <div class="top-left"></div>
+  <div class="top-right"></div>
+  <div class="bottom-right"></div>
+  <div class="bottom-left"></div>
+   
+
+  <div style="position: relative; display: inline-block;">
+    <div class="bottom-right"></div>
+    <div style="position: absolute; bottom: 0; border-bottom: 30px solid white; border-left: 100px solid transparent;"></div>
+  </div>
+</body>
+
+</html>
